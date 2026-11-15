@@ -1,0 +1,805 @@
+/* ==========================================================================
+   PORTAFOLIO CAROLINA MONTENEGRO RODRÍGUEZ
+   Paleta Botánica & Floral extraída del Moodboard / Brief:
+   - Verde Lima / Oliva Claro (Fondo base): #D1DB96 / #C6DC80
+   - Verde Oliva Oscuro: #5A6627 / #4D5F22
+   - Rosa Malva / Empolvado: #C77483 / #C3617D
+   - Vino / Borgoña Profundo: #853B46 / #9B5D6B
+   Tipografías: 'Vortigra' (Display) + 'Tahoma' (Cuerpo)
+   ========================================================================== */
+
+:root {
+  --bg-lime: #D1DB96;
+  --bg-lime-bright: #C6DC80;
+  --olive-dark: #5A6627;
+  --olive-deep: #4D5F22;
+  --rose-dusty: #C77483;
+  --rose-vibrant: #C3617D;
+  --wine-dark: #853B46;
+  --wine-soft: #9B5D6B;
+  --cream-light: #F6F8E8;
+  --text-dark: #1E2212;
+
+  --font-display: 'Vortigra', 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-body: Tahoma, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-lime);
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  /* Textura floral ambiental en el fondo */
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(199, 116, 131, 0.16) 0%, transparent 28%),
+    radial-gradient(circle at 88% 42%, rgba(90, 102, 39, 0.14) 0%, transparent 32%),
+    radial-gradient(circle at 20% 78%, rgba(133, 59, 70, 0.12) 0%, transparent 30%);
+}
+
+.container {
+  width: min(1140px, 92%);
+  margin: 0 auto;
+}
+
+/* Tipografía Display Vortigra */
+h1, h2, h3, .display-title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.section {
+  padding: 84px 0;
+  position: relative;
+}
+
+/* ==================== NAVEGACIÓN ==================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(209, 219, 150, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1.5px solid rgba(90, 102, 39, 0.25);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 16px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--wine-dark);
+}
+
+.logo-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--wine-dark);
+  color: var(--bg-lime);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--text-dark);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.main-nav a:hover {
+  color: var(--wine-dark);
+}
+
+.main-nav .nav-cta {
+  background-color: var(--wine-dark);
+  color: var(--cream-light);
+  padding: 8px 20px;
+  border-radius: 999px;
+}
+
+.main-nav .nav-cta:hover {
+  background-color: var(--olive-dark);
+  color: var(--cream-light);
+}
+
+/* ==================== 1. INICIO ==================== */
+.section-inicio {
+  min-height: 86vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.floral-ornament {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+.floral-ornament.top-left {
+  top: -10px;
+  left: -10px;
+}
+
+.inicio-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.pill-badge {
+  display: inline-block;
+  background-color: var(--rose-dusty);
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.display-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  line-height: 1.08;
+  color: var(--wine-dark);
+  margin-bottom: 18px;
+}
+
+.hero-subtitle {
+  font-size: 1.06rem;
+  color: var(--text-dark);
+  max-width: 540px;
+  margin-bottom: 24px;
+}
+
+.hero-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 440px;
+  margin-bottom: 28px;
+}
+
+.pill {
+  padding: 11px 24px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.pill.olive {
+  background-color: var(--olive-dark);
+}
+
+.pill.rose {
+  background-color: var(--rose-dusty);
+  width: 84%;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease, background-color 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-wine {
+  background-color: var(--wine-dark);
+  color: #fff;
+}
+
+.btn-wine:hover {
+  background-color: var(--olive-dark);
+}
+
+.btn-outline {
+  border: 2px solid var(--wine-dark);
+  color: var(--wine-dark);
+  background: transparent;
+}
+
+/* Gran círculo rosa de la maquetación */
+.inicio-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-rose-circle {
+  width: min(410px, 84vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: var(--rose-dusty);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+  box-shadow: 0 20px 45px rgba(133, 59, 70, 0.22);
+}
+
+.inner-editorial-card {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.quote-mark {
+  display: block;
+  font-size: 2.2rem;
+  color: var(--bg-lime);
+  margin-bottom: 10px;
+}
+
+.editorial-tagline {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.editorial-author {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--bg-lime);
+}
+
+.circle-flower {
+  position: absolute;
+  bottom: -14px;
+  right: -14px;
+  width: 170px;
+  height: 170px;
+  pointer-events: none;
+}
+
+/* ==================== 2. SOBRE MÍ ==================== */
+.section-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 38px;
+}
+
+.header-dot {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--rose-dusty);
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.header-pill {
+  background-color: var(--wine-dark);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.sobre-mi-layout {
+  display: grid;
+  grid-template-columns: 290px 1fr 190px;
+  gap: 28px;
+  align-items: start;
+}
+
+.photo-frame-wine {
+  background-color: var(--wine-dark);
+  padding: 14px;
+  border-radius: 42px;
+  box-shadow: 0 14px 30px rgba(133, 59, 70, 0.22);
+}
+
+.photo-frame-wine img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 30px;
+  display: block;
+}
+
+.craft-note {
+  margin-top: 14px;
+  background-color: var(--olive-dark);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* 4 bloques del Brief con los colores exactos del moodboard */
+.sobre-mi-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brief-block {
+  padding: 20px 26px;
+  border-radius: 26px;
+  transition: transform 0.2s ease;
+}
+
+.brief-block:hover {
+  transform: translateX(4px);
+}
+
+.brief-block h3 {
+  font-size: 1.55rem;
+  margin-bottom: 6px;
+}
+
+.brief-block p {
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.wine-block {
+  background-color: var(--wine-dark);
+  color: #fff;
+}
+.wine-block h3 {
+  color: var(--bg-lime-bright);
+}
+
+.rose-block {
+  background-color: var(--rose-dusty);
+  color: #fff;
+}
+.rose-block h3 {
+  color: var(--olive-deep);
+}
+
+.lime-block {
+  background-color: var(--bg-lime-bright);
+  color: var(--text-dark);
+  border: 1.5px solid var(--olive-dark);
+}
+.lime-block h3 {
+  color: var(--wine-dark);
+}
+
+.olive-block {
+  background-color: var(--olive-deep);
+  color: #fff;
+}
+.olive-block h3 {
+  color: var(--rose-dusty);
+}
+
+/* Columna derecha de Sobre mí */
+.sobre-mi-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-top: 28px;
+}
+
+.side-rose-badge {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  background-color: var(--rose-dusty);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.side-pill {
+  width: 100%;
+  text-align: center;
+  background-color: var(--olive-dark);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* ==================== 3. PROYECTOS ==================== */
+.proyectos-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 42px;
+}
+
+.subtitle-pill-rose {
+  background-color: var(--rose-dusty);
+  color: #fff;
+  padding: 10px 34px;
+  border-radius: 999px;
+  font-weight: 600;
+  width: min(460px, 90%);
+}
+
+.subtitle-pill-wine {
+  background-color: var(--wine-dark);
+  color: #fff;
+  padding: 9px 28px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  width: min(340px, 80%);
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.project-card {
+  background-color: var(--wine-dark);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 14px 28px rgba(77, 95, 34, 0.16);
+}
+
+.project-visual {
+  background-color: var(--olive-dark);
+  border-radius: 36px;
+  padding: 28px 22px;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.art-tag {
+  display: inline-block;
+  background-color: var(--rose-dusty);
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  margin-bottom: 12px;
+}
+
+.project-artwork h4 {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  color: var(--bg-lime);
+  margin-bottom: 10px;
+}
+
+.project-artwork p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #f4f6e8;
+}
+
+.project-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cream-pill {
+  background-color: var(--bg-lime);
+  color: var(--text-dark);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.cream-pill.short {
+  width: 78%;
+}
+
+.cream-pill.align-right {
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* ==================== 4. HABILIDADES ==================== */
+.habilidades-banner {
+  background-color: var(--rose-dusty);
+  border-radius: 32px;
+  padding: 22px 32px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skill-col {
+  padding: 16px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-right: 1.5px solid var(--text-dark);
+}
+
+.skill-col:last-child {
+  border-right: none;
+}
+
+.skill-circle {
+  width: 138px;
+  height: 138px;
+  border-radius: 50%;
+  background-color: var(--olive-dark);
+  color: var(--bg-lime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.skill-bar {
+  width: 100%;
+  background-color: var(--wine-dark);
+  color: #fff;
+  text-align: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+/* ==================== 5. CONTACTO ==================== */
+.contacto-top-box {
+  background-color: var(--olive-dark);
+  border-radius: 44px;
+  padding: 36px 44px 44px;
+  margin-bottom: 36px;
+}
+
+.contacto-top-box .section-title {
+  color: var(--text-dark);
+  margin-bottom: 28px;
+}
+
+.contacto-intro-grid {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  align-items: center;
+  gap: 36px;
+}
+
+.contacto-rose-circle {
+  width: 195px;
+  height: 195px;
+  border-radius: 50%;
+  background-color: var(--rose-dusty);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contacto-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wine-info-bar {
+  background-color: var(--wine-dark);
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-size: 0.98rem;
+}
+
+.wine-info-bar.short {
+  width: 65%;
+}
+
+.contacto-items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 32px;
+  margin-bottom: 42px;
+}
+
+.contact-pill-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.contact-pill-item:hover {
+  transform: translateX(4px);
+}
+
+.mini-rose-circle {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: var(--rose-dusty);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.mini-wine-bar {
+  flex: 1;
+  background-color: var(--wine-dark);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-size: 0.94rem;
+}
+
+.contact-form-card {
+  background-color: var(--cream-light);
+  border: 2px solid var(--olive-dark);
+  border-radius: 32px;
+  padding: 32px 36px;
+}
+
+.contact-form-card h3 {
+  font-size: 1.8rem;
+  color: var(--wine-dark);
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--olive-deep);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 1.5px solid var(--rose-dusty);
+  background-color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+
+.form-status {
+  margin-top: 14px;
+  color: var(--olive-deep);
+  font-weight: 600;
+}
+
+/* ==================== FOOTER ==================== */
+.site-footer {
+  background-color: var(--wine-dark);
+  color: var(--bg-lime);
+  text-align: center;
+  padding: 22px 0;
+  font-size: 0.9rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 960px) {
+  .inicio-grid,
+  .sobre-mi-layout,
+  .proyectos-grid,
+  .contacto-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .habilidades-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .skill-col {
+    border-right: none;
+    border-bottom: 1.5px solid rgba(30, 34, 18, 0.25);
+    padding-bottom: 28px;
+  }
+
+  .skill-col:last-child {
+    border-bottom: none;
+  }
+
+  .contacto-items-grid,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .wine-info-bar.short {
+    width: 100%;
+  }
+}
